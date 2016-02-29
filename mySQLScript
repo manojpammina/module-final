@@ -1,0 +1,20 @@
+create database rrs;
+use rrs;
+
+create table ownerTable(userid varchar(255),password varchar(255));
+insert into ownerTable(`userid`,`password`) values("manoj","password");
+
+create table reserve(id int(6) not null,name varchar(255),email varchar(255),telephone int(10),message Text,numberOfAttendees int(10),Date date,primary key(id));
+ALTER TABLE reserve MODIFY COLUMN id INT NOT NULL AUTO_INCREMENT;
+
+create table contact(name varchar(255),email varchar(255),telephone int(10),message Text);
+
+create table seatingTable(tableno int(2),tableseating int(2),primary key(tableno));
+
+
+create table statusReservation(id int(6),tableno int(2), statusType varchar(255),CHECK (statusType in ('Waitlist','Reserved'))  ,primary key(id) , FOREIGN KEY (id)
+      REFERENCES reserve(id)
+      ON UPDATE CASCADE ON DELETE RESTRICT,FOREIGN KEY (tableno)
+      REFERENCES seatingTable(tableno)
+      ON UPDATE CASCADE ON DELETE RESTRICT);
+ALTER TABLE statusReservation ADD CONSTRAINT my_constraint CHECK (statusType = 'Waitlist' OR statusType = 'Reserved');
