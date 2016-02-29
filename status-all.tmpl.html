@@ -1,0 +1,18 @@
+<table class="table table-responsive table-hover" class="col-md-6" id="table-reservations">
+    <thead>
+    <tr>
+        <th>Action</th>
+        <th ng-click="statusListVm.sortBy='id'; statusListVm.sortOrder=!statusListVm.sortOrder;">ID</th>
+        <th ng-click="statusListVm.sortBy='tableno'; statusListVm.sortOrder=!statusListVm.sortOrder;">Table Number</th>
+        <th ng-click="statusListVm.sortBy='statusType'; statusListVm.sortOrder=!statusListVm.sortOrder;">Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="stats in statusListVm.status | filter:statusListVm.searchTxt | orderBy:statusListVm.sortBy:statusListVm.sortOrder">
+        <th><a ng-href="#/reserve/{{res.id}}"><span class="glyphicon glyphicon-user" ></span></a></th>
+        <th>{{stats.id}}</th>
+        <th>{{stats.tableno}}</th>
+        <th>{{stats.statusType}}</th>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,35 @@
+<section id="contact" class="col-md-12" >
+    <div id="main-contact" >
+        <form ng-submit="contactListVm.addContact()" id="contact-form" class="form-contact-bg">
+            <h3>Get in touch</h3>
+            <h4>Fill in the form below, and we'll get back to you within 24 hours.</h4>
+            <div>
+                <label>
+                    <span for="name">Name: (required)</span><input placeholder="Please enter your name" type="text" tabindex="1" id="name" ng-model="contactListVm.contact.name" required autofocus>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span for="email">Email: (required)</span>
+                    <input placeholder="Please enter your email address" id="email" ng-model="contactListVm.contact.email" type="email" tabindex="2" required>
+                </label>
+            </div>
+            <div>
+                <label for="telephone">
+                    <span>Telephone: (required)</span>
+                    <input placeholder="Please enter your number" id="telephone" type="tel" tabindex="3" ng-model="contactListVm.contact.telephone" required>
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <span for="meaasge">Message: (required)</span>
+                    <textarea placeholder="Include all the details you can" id="message" ng-model="contactListVm.contact.Message" tabindex="4" required></textarea>
+                </label>
+            </div>
+            <div>
+                <button name="submit" type="submit" id="contact-submit">Send Contact</button>
+            </div>
+        </form>
+    </div>
+</section>

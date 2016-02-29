@@ -1,0 +1,14 @@
+<table class="table table-responsive table-hover" class="col-md-6" id="table-reservations">
+    <thead>
+    <tr>
+        <th ng-click="seatingTableListVm.sortBy='tableNo'; seatingTableListVm.sortOrder=!seatingTableListVm.sortOrder;">ID</th>
+        <th ng-click="seatingTableListVm.sortBy='tableSeating'; seatingTableListVm.sortOrder=!seatingTableListVm.sortOrder;">Table Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="table in seatingTableListVm.tables | filter:seatingTableListVm.searchTxt | orderBy:seatingTableListVm.sortBy:seatingTableListVm.sortOrder">
+        <th>{{table.tableNo}}</th>
+        <th>{{table.tableSeating}}</th>
+    </tr>
+    </tbody>
+</table>

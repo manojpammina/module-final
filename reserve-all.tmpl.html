@@ -1,0 +1,28 @@
+<table class="table table-responsive table-hover" id="table-reservations">
+    <thead>
+    <tr>
+        <th>Action</th>
+        <th ng-click="reserveListVm.sortBy='id'; reserveListVm.sortOrder=!reserveListVm.sortOrder;">ID</th>
+        <th ng-click="reserveListVm.sortBy='name'; reserveListVm.sortOrder=!reserveListVm.sortOrder;">Name</th>
+        <th ng-click="reserveListVm.sortBy='email'; reserveListVm.sortOrder=!reserveListVm.sortOrder;">E-mail</th>
+        <th ng-click="reserveListVm.sortBy='telephone'; reserveListVm.sortOrder=!reserveListVm.sortOrder;">Telephone</th>
+        <th ng-click="reserveListVm.sortBy='noOfAttendees'; reserveListVm.sortOrder=!reserveListVm.sortOrder;">Number of Attendees</th>
+        <th ng-click="reserveListVm.sortBy='date'; reserveListVm.sortOrder=!reserveListVm.sortOrder;">Date</th>
+        <th ng-click="reserveListVm.sortBy='time'; reserveListVm.sortOrder=!reserveListVm.sortOrder;">Time</th>
+        <th ng-click="reserveListVm.sortBy='message'; reserveListVm.sortOrder=!reserveListVm.sortOrder;">Message</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="res in reserveListVm.reservations | filter:reserveListVm.searchTxt | orderBy:reserveListVm.sortBy:reserveListVm.sortOrder">
+        <th><a ng-href="#/reserve/{{res.id}}"><span class="glyphicon glyphicon-user" ></span></a></th>
+        <th>{{res.id}}</th>
+        <th>{{res.name}}</th>
+        <th>{{res.email}}</th>
+        <th>{{res.telephone}}</th>
+        <th>{{res.noOfAttendees}}</th>
+        <th>{{res.date}}</th>
+        <th>{{res.time}}</th>
+        <th>{{res.message}}</th>
+    </tr>
+    </tbody>
+</table>

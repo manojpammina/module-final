@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="rrs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Restarunt Reservation System</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <video autoplay muted loop poster="images/bgvideo.png" id="bgvideo" >
+        <source src="images/bgvideo.webm" type="video/webm">
+        <source src="images/bgvideo.mp4" type="video/m">
+    </video>
+
+</head>
+
+<body >
+
+<div class="container-fluid">
+    <header>
+        <div class="row">
+            <div class="pull-right social-icons">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+        <nav class="navbar navbar-default" style="background: transparent;border: none" >
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#/home">HOME</a></li>
+                        <li><a href="#/login">LOGIN</a></li>
+                        <li><a href="#/reserve">RESERVE</a></li>
+                        <li><a href="#/about">ABOUT US</a></li>
+                        <li ><a href="#/contact">CONTACT</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <section ng-view class="section-content-main"></section>
+
+
+
+
+    <footer style="color: white" >&copy; Copyright 2016, Restaurant Reservation website created by Manoj Pammina</footer>
+
+</div>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://code.angularjs.org/1.4.8/angular.js"></script>
+<script src="https://code.angularjs.org/1.4.8/angular-messages.js"></script>
+<script src="https://code.angularjs.org/1.4.8/angular-route.js"></script>
+<script type="text/javascript" src="app/js/myscript.js"></script>
+<script type="text/javascript" src="app/app.js"></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js'></script>
+<script type="text/javascript" src="app/controllers/about.controller.js"></script>
+<script type="text/javascript" src="app/controllers/contact.controller.js"></script>
+<script type="text/javascript" src="app/controllers/home.controller.js"></script>
+<script type="text/javascript" src="app/controllers/login.controller.js"></script>
+<script type="text/javascript" src="app/controllers/reserve.controller.js"></script>
+<script type="text/javascript" src="app/controllers/reserve-all.controller.js"></script>
+<script type="text/javascript" src="app/controllers/reserve-specific.controller.js"></script>
+<script type="text/javascript" src="app/controllers/reserve-status.controller.js"></script>
+<script type="text/javascript" src="app/controllers/status-all.controller.js"></script>
+<script type="text/javascript" src="app/controllers/seating-table.controller.js"></script>
+<script type="text/javascript" src="app/controllers/contact-all.controller.js"></script>
+<script type="text/javascript" src="app/services/data.service.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.app"></script>
+<![endif]-->
+<script>
+    document.createElement('video');
+</script>
+<![endif]-->
+</body>
+</html>

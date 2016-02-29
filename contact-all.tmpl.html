@@ -1,0 +1,20 @@
+<table class="table table-responsive table-hover" class="col-md-6" id="table-reservations">
+    <thead>
+    <tr>
+        <th>Action</th>
+        <th ng-click="contacAlltListVm.sortBy='name'; contacAlltListVm.sortOrder=!contacAlltListVm.sortOrder;">Name</th>
+        <th ng-click="contacAlltListVm.sortBy='email'; contacAlltListVm.sortOrder=!contacAlltListVm.sortOrder;">E-mail</th>
+        <th ng-click="contacAlltListVm.sortBy='telephone'; contacAlltListVm.sortOrder=!contacAlltListVm.sortOrder;">Telephone</th>
+        <th ng-click="contacAlltListVm.sortBy='message'; contacAlltListVm.sortOrder=!contacAlltListVm.sortOrder;">Message</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="contact in contacAlltListVm.contacts | filter:contacAlltListVm.searchTxt | orderBy:contacAlltListVm.sortBy:contacAlltListVm.sortOrder">
+        <th><a ng-href="#/reserve/{{res.id}}"><span class="glyphicon glyphicon-remove-circle" ></span></a></th>
+        <th>{{contact.name}}</th>
+        <th>{{contact.email}}</th>
+        <th>{{stcontactats.telephone}}</th>
+        <th>{{stcontactats.message}}</th>
+    </tr>
+    </tbody>
+</table>

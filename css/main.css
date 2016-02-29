@@ -1,0 +1,471 @@
+
+
+
+/*************************
+****Back Ground Video**
+**************************/
+
+@media screen and (max-device-width: 100px) {
+  html{
+    background:url(../images/bgvideo.png) #000 no-repeat center center fixed;
+  }
+  #bgvideo{
+    display: none;
+  }
+}
+
+video#bgvideo{
+  position: fixed;
+  top: 50%;
+  left:50%;
+  min-width: 100%;
+  min-height: 100%;
+  width:auto;
+  height:auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(../images/bgvideo.png) no-repeat;
+  background-size: cover;
+  display: block;
+}
+/*************************
+*******Typography******
+**************************/
+
+body {
+  font-family: 'Dosis', sans-serif;
+  width: 100%;
+  background-color: #fff;
+  height:100%;
+}
+
+.container-full{
+padding: 2%;
+}
+
+/*************************
+*******Header CSS******
+**************************/
+
+.social-icons a {
+  font-size: 18px;
+  color: #fff;
+  padding-left:20px;
+}
+
+.social-icons .fa-facebook:hover {
+  color: #3B5997
+}
+
+.social-icons .fa-twitter:hover {
+  color:#29C5F6
+}
+
+.social-icons .fa-google-plus:hover {
+  color:#D13D2F
+}
+
+.social-icons .fa-youtube:hover{
+  color: #ec5538
+}
+.social-icons{
+  padding-right: 7%;
+}
+.navbar-right {
+  background-color: transparent;
+  padding:0 95px 0 0;
+  opacity: .9
+}
+
+.navbar-right li a {
+  padding: 35px 21px;
+  font-size: 22px;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  font-weight: 300;
+}
+
+.navbar-right li a:hover,
+.navbar-right li a:focus,
+.navbar-right .active a {
+  background-color: #fff;
+  color: #39eb0c
+}
+
+
+.navbar-default .navbar-nav>li>a{
+  color:white;
+}
+
+.fixed-menu {
+  background-color: #1B7B98;
+  position: fixed;
+  top: 0;
+}
+
+.fixed-menu .navbar-right {
+  padding: 0;
+}
+
+
+.fixed-menu .navbar-right li a {
+  font-size: 18px;
+  padding: 20px 25px;
+  text-shadow:inherit;
+}
+/*************************
+*******Body CSS******
+**************************/
+
+.section-content-main{
+  margin: 5%;
+  postion:relative;
+}
+
+.home{
+  padding: 10%;
+  align-content: center;
+  overflow: hidden;
+}
+
+#main-home {
+  background: none repeat scroll 0 0 #000000;
+  bottom: 14%;
+  float: left;
+  left: 0;
+  opacity: 0.4;
+  padding: 2% 9% 2%;
+  right: inherit;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: left;
+  border-radius: 25px;
+}
+
+
+#main-home h2{
+  font-size: 38px;
+}
+
+#main-home h4{
+  font-size: 24px;
+}
+
+#main-home  a{
+  font-size: 22px;
+  color: #2da1c5;
+}
+
+#main-home  a:hover{
+  color: #2588a6;
+}
+
+#main-home a:hover i{
+  margin-left: 35px;
+}
+
+#main-home a i{
+  margin-left: 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition:all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/*************************
+*******Login CSS******
+**************************/
+
+#login {
+  padding-top: 50px;
+  opacity: 0.8;
+}
+#login .form-wrap {
+  width: 30%;
+  margin: 0 auto;
+  padding: 2%;
+  background-color: grey;
+  border-radius: 25px;
+}
+#login h1 {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+#login .form-group {
+  margin-bottom: 25px;
+}
+#login .checkbox {
+  margin-bottom: 20px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+#login .checkbox.show:before {
+  content: '\e013';
+  color: #079907;
+  font-size: 17px;
+  margin: 1px 0 0 3px;
+  position: absolute;
+  pointer-events: none;
+  font-family: 'Glyphicons Halflings';
+}
+#login .checkbox .character-checkbox {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  display: inline-block;
+}
+#login .checkbox .label {
+  color: #6d6d6d;
+  font-size: 13px;
+  font-weight: normal;
+}
+#login .btn.btn-custom {
+  font-size: 14px;
+  margin-bottom: 20px;
+  background: #079907;
+  background-image:linear-gradient(bottom, #108c08 0%, #5f9907 52%);
+  background-image:-moz-linear-gradient(bottom, #088c00 0%, #11995f 52%);
+  background-image:-webkit-linear-gradient(bottom, #0d8c0f 0%, #279900 52%);
+  color:#FFF;
+}
+#login .forget {
+  font-size: 13px;
+  text-align: center;
+  display: block;
+  background-color: grey;
+
+}
+
+/*    --------------------------------------------------
+	:: Inputs & Buttons
+	-------------------------------------------------- */
+.form-control {
+  color: #212121;
+}
+.btn-custom {
+  color: #fff;
+  background: #079907;
+  background-image:linear-gradient(bottom, #108c08 0%, #5f9907 52%);
+  background-image:-moz-linear-gradient(bottom, #088c00 0%, #11995f 52%);
+  background-image:-webkit-linear-gradient(bottom, #0d8c0f 0%, #279900 52%);
+  color:#FFF;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+  color: #fff;
+}
+
+/*************************
+*******About CSS******
+**************************/
+
+.aboutus{
+  color: #fff;
+}
+
+/*************************
+*******Contact CSS******
+**************************/
+
+.form-contact-bg{
+  background-color: grey;
+  padding: 1% 10% ;
+  border-radius: 25px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form textarea {
+  width:100%;
+  box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  border:1px solid #CCC;
+  background:#e8e8e8;
+  align:center;
+  margin:0 0 5px;
+  padding:10px;
+  border-radius:5px;
+}
+
+#contact-form button[type="submit"] {
+  cursor:pointer;
+  width:100%;
+  border:none;
+  background: #079907;
+  background-image:linear-gradient(bottom, #108c08 0%, #5f9907 52%);
+  background-image:-moz-linear-gradient(bottom, #088c00 0%, #11995f 52%);
+  background-image:-webkit-linear-gradient(bottom, #0d8c0f 0%, #279900 52%);
+  color:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+  border-radius:5px;
+}
+#main-contact{
+  color: #fff;
+}
+::-webkit-input-placeholder {
+  color:#888;
+}
+:-moz-placeholder {
+  color:#888;
+}
+::-moz-placeholder {
+  color:#888;
+}
+:-ms-input-placeholder {
+  color:#888;
+}
+#main-contact{
+  opacity: 0.7;
+
+}
+/*************************
+*******Reserve CSS******
+**************************/
+
+/*************************
+***Left Reserve CSS******
+**************************/
+#reserve-form input[type="text"],
+#reserve-form input[type="email"],
+#reserve-form input[type="tel"],
+#reserve-form textarea,
+#reserve-form input[type="number"],
+#reserve-form input[type="date"],
+#reserve-form input[type="text"]{
+  width:100%;
+  box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  border:1px solid #CCC;
+  background:#e8e8e8;
+  align:center;
+  margin:0 0 5px;
+  padding:10px;
+  border-radius:5px;
+}
+
+.form-reserve-bg{
+  background-color: grey;
+  padding: 1% 10% ;
+  border-radius: 25px;
+  opacity: 0.7;
+}
+
+#reserve-form button[type="submit"] {
+  cursor:pointer;
+  width:100%;
+  border:none;
+  background: #079907;
+  background-image:linear-gradient(bottom, #108c08 0%, #5f9907 52%);
+  background-image:-moz-linear-gradient(bottom, #088c00 0%, #11995f 52%);
+  background-image:-webkit-linear-gradient(bottom, #0d8c0f 0%, #279900 52%);
+  color:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+  border-radius:5px;
+}
+#main-reserve{
+  color: #fff;
+
+}
+::-webkit-input-placeholder {
+  color:#888;
+}
+:-moz-placeholder {
+  color:#888;
+}
+::-moz-placeholder {
+  color:#888;
+}
+:-ms-input-placeholder {
+  color:#888;
+}
+
+/*************************
+***Right Reserve CSS******
+**************************/
+
+#existing-reservation{
+  color: #fff;
+}
+.existing-form-reserve-bg{
+  background-color: grey;
+  padding: 1% 10% ;
+  border-radius: 25px;
+  opacity: 0.7;
+}
+#existing-reservation-form input[type="text"],
+#existing-reservation-form input[type="text"]{
+  width:100%;
+  box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  border:1px solid #CCC;
+  background:#e8e8e8;
+  align:center;
+  margin:0 0 5px;
+  padding:10px;
+  border-radius:5px;
+}
+#existing-reservation-form button[type="submit"] {
+  cursor:pointer;
+  width:100%;
+  border:none;
+  background: #079907;
+  background-image:linear-gradient(bottom, #108c08 0%, #5f9907 52%);
+  background-image:-moz-linear-gradient(bottom, #088c00 0%, #11995f 52%);
+  background-image:-webkit-linear-gradient(bottom, #0d8c0f 0%, #279900 52%);
+  color:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+  border-radius:5px;
+}
+
+/*************************
+**reservation table CSS***
+**************************/
+
+#table-reservations {
+  background-color: grey;
+  color: black;
+  border-radius:5px;
+
+}
+#table-reservations  .table tbody tr:hover td, .table tbody tr:hover th {
+  background-color: #eeeeea;
+}
+
+/*************************
+*******Footer CSS******
+**************************/
+
+ footer {
+  position:fixed;
+  text-align: center;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  background:transparent;
+  color: white;
+}
+small.footerCopyright{
+  font-family: "Lucida Grande";
+
+}

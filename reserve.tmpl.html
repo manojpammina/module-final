@@ -1,0 +1,96 @@
+<section id="reserve" class="col-md-12" >
+    <div id="main-reserve" class="col-md-6" >
+        <form ng-submit="reserveAllListVm.addReservation()" id="reserve-form" class="form-reserve-bg" novalidate >
+            <h3>Reserve A Table</h3>
+            <div>
+                <label>
+                    <span for="name">Name: (required)</span>
+                    <input placeholder="Please enter your name" id="name" type="text" tabindex="1" ng-model="reserveAllListVm.reservation.name" required autofocus>
+                </label>
+            </div>
+            <div>
+                <label >
+                    <span for="email">Email: (required)</span>
+                    <input placeholder="Please enter your email address" id="email" type="email" tabindex="2" ng-model="reserveAllListVm.reservation.email" required>
+                </label>
+            </div>
+            <div>
+                <label for="telephone">
+                    <span>Telephone: (required)</span>
+                    <input placeholder="Please enter your number" id="telephone" type="tel" tabindex="3" ng-model="reserveAllListVm.reservation.telephone" required>
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <span for="meaasge">Message: (required)</span>
+                    <textarea placeholder="Include all the details you can" id="message" ng-model="reserveAllListVm.reservation.message" tabindex="4" required></textarea>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span for="noofAttendees">Number of people Attending: (required)</span>
+                    <input placeholder="Enter Number of People attending" id="noofAttendees" type="number" ng-model="reserveAllListVm.reservation.noofAttendees" tabindex="5" min="1" max="10" required>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span for="date">Date and Time of Booking: (required)</span>
+                    <input placeholder="Please Enter the Date and Time of Booking" id="date" ng-bind="reserveAllListVm.reservation.date|date:'M/d/yyyy'" ng-model="reserveAllListVm.reservation.date" type="date" tabindex="6" required>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span for="time">Time of Booking:(required)</span>
+                    <input placeholder="Please enter the time of booking" id="time" ng-model="reserveAllListVm.reservation.time" type="text"ng-bind="reserveAllListVm.reservation.date|date:'hh:mm:ss'" tabindex="7" required>
+                </label>
+            </div>
+
+            <div>
+                <button name="submit" type="submit" id="reserve-submit">Book</button>
+            </div>
+        </form>
+    </div>
+    <div id="existing-reservation" class="col-md-6" >
+        <div class="row">
+            <form id="existing-reservation-form" class="existing-form-reserve-bg">
+                <h3>Existing Reservation</h3>
+                <div>
+                    <label>Reservation number: (required)</span>
+                        <input placeholder="Enter the reservation number" ng-model="reserveStatusListVm.id" name="id" type="text" tabindex="1"  required>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Name: (required)</span>
+                        <input placeholder="Please enter your name" type="text" tabindex="2" required autofocus>
+                    </label>
+                </div>
+                <div>
+                    <button name="submit" type="submit" id="existing-reservation-submit" ng-href="#/status/:reserveStatusListVm.id">Check Status</button>
+                </div>
+                <div>
+                    <button name="submit" type="submit" id="edit-reservation-submit">Edit Reservation</button>
+                </div>
+            </form>
+        </div>
+        </br>
+        <div class="row">
+            <div class="existing-form-reserve-bg" >
+                <form id="reserve-form1" class="form-reserve-bg" >
+                    <h3>Reservation Deatils</h3>
+                    <div>
+                        <h3>
+                            <p>The status of the resevation on the ID:{{reserveStatusListVm.status.id}} is {{reserveStatusListVm.status.statusType}} for the table {{reserveStatusListVm.status.tableno}}</p>
+                        </h3>
+                    </div>
+
+                    <div>
+                        <button name="cancel" type="submit" id="reserve-cancel-submit">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>

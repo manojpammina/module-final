@@ -1,0 +1,58 @@
+<div id="main-reserve" class="col-md-6" >
+    <form id="reserve-form" class="form-reserve-bg" >
+        <h3>Reservation Deatils</h3>
+        <div>
+            <label>
+                <span>ID: </span> {{reserveSpecificDetailVm.reservation.id}}
+                </label>
+        </div>
+        <div>
+            <label>
+                <span>Name:</span> {{reserveSpecificDetailVm.reservation.name}}
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Email: </span>{{reserveSpecificDetailVm.reservation.email}}
+
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Telephone:</span>{{reserveSpecificDetailVm.reservation.telephone}}
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <span>Message:</span>{{reserveSpecificDetailVm.reservation.message}}
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Number of people Attending:</span>{{reserveSpecificDetailVm.reservation.noOfAttendees}}
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Date and Time of Booking:</span>{{reserveSpecificDetailVm.reservation.date}}
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Time of Booking:</span>{{reserveSpecificDetailVm.reservation.time}}
+            </label>
+        </div>
+        <div>
+            <label>
+                <span>Time of Booking:</span>{{reserveSpecificDetailVm.reservation.message}}
+            </label>
+        </div>
+
+
+        <div>
+            <button name="submit" type="submit" id="reserve-update-submit">Update Reservation</button>
+            <button name="cancel" type="submit" id="reserve-cancel-submit">Cancel</button>
+        </div>
+    </form>
+</div>
